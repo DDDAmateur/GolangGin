@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON内容提取器</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/index_css.css">
+</head>
+<body>
+    <div class="container">
+        <h1>{{.msg}}</h1>
+        <div class="input-section">
+            <div class="section-title">输入JSON数据：</div>
+            <textarea id="jsonInput" placeholder="请在此粘贴JSON数据..."></textarea>
+        </div>
+        <div class="button-container">
+            <button onclick="extractContent()">提取内容</button>
+        </div>
+        <div class="output-section">
+            <div class="section-title">提取结果：</div>
+            <div id="output"></div>
+            <div class="save-container">
+                <select id="fileType">
+                    <option value="txt">TXT文件</option>
+                    <option value="md">Markdown文件</option>
+                </select>
+                <button onclick="saveToFile()" class="save-button">保存文件</button>
+            </div>
+        </div>
+    </div>
+    <script src="../static/js/script.js"></script>
+</body>
+</html> 
